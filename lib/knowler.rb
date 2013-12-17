@@ -1,4 +1,3 @@
-require 'chronic'
 require 'csv'
 require 'delegate'
 require 'phony'
