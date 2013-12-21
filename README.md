@@ -1,7 +1,7 @@
 Rundown
 =======
 
-[![Gem Version](https://badge.fury.io/rb/rundown.png)](http://badge.fury.io/rb/rundown) [![Build Status](https://travis-ci.org/modsognir/rundown.png)](https://travis-ci.org/modsognir/rundown)
+[![Gem Version](https://badge.fury.io/rb/rundown.png)](http://badge.fury.io/rb/rundown) [![Build Status](https://travis-ci.org/modsognir/rundown.png)](https://travis-ci.org/modsognir/rundown) [![Code Climate](https://codeclimate.com/github/modsognir/sentiment_parser.png)](https://codeclimate.com/github/modsognir/sentiment_parser) [![Coverage Status](https://coveralls.io/repos/modsognir/rundown/badge.png)](https://coveralls.io/r/modsognir/rundown)
 
 Rundown is a simple Natural Language Processor built with Ruby, inspired by [Knwl.js](https://github.com/loadfive/Knwl.js). Rundown scans through text, user data, or just about anything for likely data of interest, phone numbers, dates, locations, emails, times, as well as likelyhood of spam and overall emotion.
 
