@@ -1,19 +1,10 @@
 module Rundown
   class Parser
     attr_accessor :text
-    
+
     def initialize(text)
       @text = text
     end
-
-    # def processors
-    #   [
-    #     ,
-    #     Processors::Email,
-    #     Processors::Phone,
-    #     Processors::Sentiment
-    #   ]
-    # end
 
     def dates
       @dates ||= Processors::Dates.new(text).process
