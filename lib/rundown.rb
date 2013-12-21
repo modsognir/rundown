@@ -5,11 +5,10 @@ require 'nickel'
 require 'sentiment_parser'
 
 require 'rundown/processor'
-require 'rundown/words'
-require 'rundown/email_processor'
-require 'rundown/date_processor'
-require 'rundown/phone_processor'
-require 'rundown/sentiment_processor'
+require 'rundown/processors/email'
+require 'rundown/processors/dates'
+require 'rundown/processors/phone'
+require 'rundown/processors/sentiment'
 
 module Rundown
   module_function
