@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rundown::VERSION
   spec.authors       = ["Jared Fraser"]
   spec.email         = ["dev@jsf.io"]
-  spec.description   = %q{knows things}
-  spec.summary       = %q{knows things}
+  spec.description   = %q{Extracts dates, phone numbers, sentiment and other items from naturally worded text.}
+  spec.summary       = %q{Natural Language Processor}
   spec.homepage      = ""
   spec.license       = "MIT"
 
