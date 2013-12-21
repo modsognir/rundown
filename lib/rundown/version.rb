@@ -1,3 +1,3 @@
-module Knowler
+module Rundown
   VERSION = '0.0.1'
 end

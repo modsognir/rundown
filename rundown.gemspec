@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'knowler/version'
+require 'rundown/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "knowler"
-  spec.version       = Knowler::VERSION
+  spec.name          = "rundown"
+  spec.version       = Rundown::VERSION
   spec.authors       = ["Jared Fraser"]
   spec.email         = ["dev@jsf.io"]
   spec.description   = %q{knows things}

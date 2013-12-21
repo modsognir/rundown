@@ -1,4 +1,4 @@
-module Knowler
+module Rundown
   class Words < SimpleDelegator
     attr_accessor :text
     

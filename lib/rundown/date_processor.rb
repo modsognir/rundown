@@ -1,4 +1,4 @@
-module Knowler
+module Rundown
   class DateProcessor < Processor
     attr_accessor :text, :parser
 

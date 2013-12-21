@@ -1,7 +1,7 @@
-Knowler
+Rundown
 =======
 
-[![Build Status](https://travis-ci.org/modsognir/knowler.png)](https://travis-ci.org/modsognir/knowler)
+[![Build Status](https://travis-ci.org/modsognir/rundown.png)](https://travis-ci.org/modsognir/rundown)
 
 ###Known Issues
 

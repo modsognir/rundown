@@ -1,4 +1,4 @@
-module Knowler
+module Rundown
   class EmailProcessor < Processor
     REGEX = /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 

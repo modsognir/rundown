@@ -1,4 +1,4 @@
-module Knowler
+module Rundown
   class SentimentProcessor < Processor
     attr_accessor :parser
 

@@ -1,4 +1,4 @@
-module Knowler
+module Rundown
   class Processor
     attr_accessor :words
 
