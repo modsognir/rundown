@@ -30,6 +30,9 @@ David (david32@gmail.com)"
     it {  expect(Rundown::Processors::Twitter.new(subject).process.first).to eql('@modsognir') }
   end
 
+  describe 'links' do
+    it {  expect(Rundown::Processors::Links.new(subject).process.first).to eql('http://theevent.com') }
+  end
 
   context 'basic string' do
     subject { Rundown.parse("I'll see you on the 18th, give me a ring on 07912 345 678. - Jerertt, me@example.com") }
