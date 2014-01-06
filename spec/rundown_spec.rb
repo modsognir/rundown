@@ -14,7 +14,8 @@ David (david32@gmail.com)"
 
   describe 'dates' do
     # FIXME: remove dependence on start date knowledge
-    it {  expect(Rundown::Processors::Dates.new(subject).process.map(&:start_date).map(&:date)).to include "20131228"}
+    year = Time.now.year
+    it {  expect(Rundown::Processors::Dates.new(subject).process.map(&:start_date).map(&:date)).to include "#{year}1228"}
   end
 
   describe 'phones' do
