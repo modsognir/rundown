@@ -10,6 +10,7 @@ require 'rundown/processors/email'
 require 'rundown/processors/dates'
 require 'rundown/processors/phone'
 require 'rundown/processors/sentiment'
+require 'rundown/processors/twitter'
 
 module Rundown
   module_function
