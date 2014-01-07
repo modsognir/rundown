@@ -41,6 +41,12 @@ David (david32@gmail.com)"
       expect(subject.emails).to eql(["me@example.com"])
     end
 
+    it 'extracts dates' do
+      now = Date.today
+      expected = "#{now.year}#{now.month.to_s.rjust(2, '0')}18"
+      expect(subject.dates.map(&:start_date).map(&:date)).to eql([expected])
+    end
+
     it 'extracts phone numbers' do
       expect(subject.phones).to eql(["07912345678"])
     end
