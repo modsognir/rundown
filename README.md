@@ -50,3 +50,7 @@ Or install it yourself as:
 ###Licence
 
 Project released under an MIT license.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/modsognir/rundown/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
