@@ -1,19 +1,19 @@
 module Rundown
   module Processors
     class Phone < Rundown::Processor
-      attr_accessor :validator, :text
+      attr_accessor :formatter, :text
 
-      def initialize(words, validator=Phony)
+      def initialize(words, formatter=Phony)
         @text = words
-        @validator = validator
+        @formatter = formatter
       end
 
-      def plausible?(number)
-        validator.plausible?(number)
+      def format(number)
+        number.start_with?('0') ? number : formatter.formatted(number)
       end
 
       def process
-        text.scan(/(\+?(\(|\)|[0-9]|\s|-|\.){4,20})/).select {|e| plausible?(e) }
+        remove_punctuation(text).scan(/\d{7,13}/).map {|number| format(number) }
       end
     end
   end

@@ -2,7 +2,7 @@ module Rundown
   class Processor
     attr_accessor :words
 
-    PUNCTUATION = /[\s`!()\[\]{};:'".,<>?]/
+    PUNCTUATION = /[\s`!()\[\]{}\-;:'".,<>?]/
 
     def initialize(words)
       @words = words.to_s.split(/\s/)
@@ -12,6 +12,10 @@ module Rundown
 
     def strip_punctuation(word)
       word.gsub(/^#{PUNCTUATION}/, '').gsub(/#{PUNCTUATION}$/, '')
+    end
+
+    def remove_punctuation(word)
+      word.gsub(/#{PUNCTUATION}/, '')
     end
   end
 end

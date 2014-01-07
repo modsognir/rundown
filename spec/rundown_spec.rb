@@ -19,7 +19,7 @@ David (david32@gmail.com)"
   end
 
   describe 'phones' do
-    it { pending; expect(Rundown::Processors::Phone.new(subject).process).to eql ["212-323-1239"]}
+    it { expect(Rundown::Processors::Phone.new(subject).process).to eql ["+1 212 323 1239"]}
   end
 
   describe 'sentiment' do
@@ -42,8 +42,7 @@ David (david32@gmail.com)"
     end
 
     it 'extracts phone numbers' do
-      pending
-      expect(subject.phones).to eql(["07912 345 678"])
+      expect(subject.phones).to eql(["07912345678"])
     end
 
     it 'extracts sentiment' do
