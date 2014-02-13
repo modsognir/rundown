@@ -10,6 +10,7 @@ require 'rundown/processors/email'
 require 'rundown/processors/dates'
 require 'rundown/processors/links'
 require 'rundown/processors/phone'
+require 'rundown/processors/reading_time'
 require 'rundown/processors/sentiment'
 require 'rundown/processors/twitter'
 
