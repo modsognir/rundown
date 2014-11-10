@@ -21,5 +21,13 @@ module Rundown
     def sentiment
       @sentiment ||= Processors::Sentiment.new(text).process
     end
+
+    def usernames
+      @usernames ||= Processors::Twitter.new(text).process
+    end
+
+    def hashtags
+      @hashtags ||= Processors::Hashtags.new(text).process
+    end
   end
 end
