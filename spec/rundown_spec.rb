@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Rundown do
   subject {
     "I'm sorry, I'm extremely busy right now. I just looked at the clock, and it's 12:54 AM, I've still got a lot of work to do.  Don't worry about the event tomorrow, it's been moved ahead a week, the 28th of december. Remember though, you've got to call to get a ticket soon, their # is 1-212-323-1239. Their website says it costs $23 per person.
-If you've got enough time, they have some more information on their website, http://theevent.com. @modsognir has tickets already.
+If you've got enough time, they have some more information on their website, http://theevent.com. @modsognir has tickets already. #prepared
 Regards,
 David (david32@gmail.com)"
   }
@@ -32,6 +32,10 @@ David (david32@gmail.com)"
 
   describe 'links' do
     it {  expect(Rundown::Processors::Links.new(subject).process.first).to eql('http://theevent.com') }
+  end
+
+  describe 'hashtags' do
+    it {  expect(Rundown::Processors::Hashtags.new(subject).process.first).to eql('#prepared') }
   end
 
   context 'basic string' do
