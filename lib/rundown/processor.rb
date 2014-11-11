@@ -1,11 +1,16 @@
 module Rundown
   class Processor
-    attr_accessor :words
+    attr_accessor :words, :text
 
     PUNCTUATION = /[\s`!()\[\]{}\-;:'".,<>?]/
 
     def initialize(words)
-      @words = words.to_s.split(/\s/)
+      @text = words
+      @words = @text.to_s.split(/\s/)
+    end
+
+    def sentences
+      @sentences ||= text.gsub(/\s+/, ' ').strip.split(/\.|\?|!/)
     end
 
   private

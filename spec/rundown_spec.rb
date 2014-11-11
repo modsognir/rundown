@@ -38,6 +38,11 @@ David (david32@gmail.com)"
     it {  expect(Rundown::Processors::Hashtags.new(subject).process.first).to eql('#prepared') }
   end
 
+  describe 'reading grade' do
+    it {  expect(Rundown::Processors::ReadingGrade.new(subject).process).to eql(7) }
+    it {  expect(Rundown::Processors::ReadingGrade.new(subject).score.round(2)).to eql(6.46) }
+  end
+
   context 'basic string' do
     subject { Rundown.parse("I'll see you on the 18th, give me a ring on 07912 345 678. - Jerertt, me@example.com") }
 

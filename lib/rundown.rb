@@ -12,6 +12,7 @@ require 'rundown/processors/hashtags'
 require 'rundown/processors/links'
 require 'rundown/processors/phone'
 require 'rundown/processors/reading_time'
+require 'rundown/processors/reading_grade'
 require 'rundown/processors/sentiment'
 require 'rundown/processors/twitter'
 
