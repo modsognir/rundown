@@ -2,7 +2,10 @@ require 'spec_helper'
 
 describe Rundown do
   subject {
-    "I'm sorry, I'm extremely busy right now. I just looked at the clock, and it's 12:54 AM, I've still got a lot of work to do.  Don't worry about the event tomorrow, it's been moved ahead a week, the 28th of december. Remember though, you've got to call to get a ticket soon, their # is 1-212-323-1239. Their website says it costs $23 per person.
+    "I'm sorry, I'm extremely busy right now. I just looked at the clock, and it's 12:54 AM,
+    I've still got a lot of work to do.  Don't worry about the event tomorrow,
+    it's been moved ahead a week, the 28th of december. Remember though,
+    you've got to call to get a ticket soon, their # is 1-212-323-1239. Their website says it costs $23 per person.
 If you've got enough time, they have some more information on their website, http://theevent.com. @modsognir has tickets already. #prepared
 Regards,
 David (david32@gmail.com)"
@@ -42,6 +45,17 @@ David (david32@gmail.com)"
     it {  expect(Rundown::Processors::ReadingGrade.new(subject).process).to eql(7) }
     it {  expect(Rundown::Processors::ReadingGrade.new(subject).score.round(2)).to eql(6.46) }
   end
+
+  describe 'frequency (1)' do
+    let(:result) { [["im"], ["its"], ["of"], ["youve"], ["website"]] }
+    it {  expect(Rundown::Processors::Frequency.new(subject).process[2]).to eql(result) }
+  end
+
+  describe 'frequency (2)' do
+    let(:result) { [["youve", "got"], ["their", "website"]] }
+    it {  expect(Rundown::Processors::Frequency.new(subject, 2).process[2]).to eql(result) }
+  end
+
 
   context 'basic string' do
     subject { Rundown.parse("I'll see you on the 18th, give me a ring on 07912 345 678. - Jerertt, me@example.com") }
