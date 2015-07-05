@@ -23,7 +23,7 @@ David (david32@gmail.com)"
   end
 
   describe 'phones' do
-    it { expect(Rundown::Processors::Phone.new(complex_string).process).to eql ["+1 212 323 1239"]}
+    it { expect(Rundown::Processors::Phone.new(complex_string).process).to eql ["+1 (212) 323 1239"]}
   end
 
   describe 'sentiment' do
